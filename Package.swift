@@ -13,11 +13,15 @@ let package = Package(
         ),
     ],
     dependencies: [
+        .package(url: "https://github.com/MussaCharles/JXPageControl.git", branch: "feature/SPM-support")
     ],
     targets: [
         .target(
             name: "JXBanner",
-            dependencies: []
-	),
+            dependencies: [
+                "JXPageControl"
+            ],
+            path: "JXBanner/Classes"
+        )
     ]
 )
